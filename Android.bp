@@ -2,3 +2,15 @@ hidl_package_root {
     name: "vendor.pa",
     path: "hardware/pa/interfaces",
 }
+
+java_library {
+    name: "vendor.ext.biometrics.face.V1_0",
+    installable: true,
+    srcs: [
+        "hardware/pa/interfaces/biometrics/face/V1_0/*.java",
+        "hardware/pa/interfaces/biometrics/face/V1_0/*.aidl",
+    ],
+    aidl: {
+        local_include_dirs: ["hardware/pa/interfaces/biometrics/face/V1_0"],
+    },
+}
